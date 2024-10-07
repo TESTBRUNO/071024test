@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% load static %}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  {% for i in set %}
+  {{i.author}}
+  {{i.name}}
+  {{i.description}}
+  {{i.size}}
+  <img src="{% static i.img|cut:'myapp/static' %}" class="card-img-top" alt="...">
+  {% endfor %}
+</body>
+</html>
